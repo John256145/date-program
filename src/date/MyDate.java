@@ -16,6 +16,9 @@ public class MyDate {
 		year = x;
 		month = y;
 		day = z;
+		String month = strMonths[y - 1];
+		System.out.println(day + " " + month + " " + year);
+		System.out.println(isLeapYear(x));
 }
 	
 	
@@ -58,7 +61,15 @@ public class MyDate {
 		return BasicFormat ;
 	}
 	
+	public boolean isLeapYear (int x){
+		if ((x % 4 == 0 && x % 100 != 0) || (x % 400 == 0)) {
+			return true;
+		}else {
+			return false;
+		}
+		
 	
+	}
 	
 	
 	//just to make sure everything is working
