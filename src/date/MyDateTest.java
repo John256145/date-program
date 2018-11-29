@@ -7,7 +7,11 @@ public class MyDateTest {
 		
 		MyDate d1 = new MyDate(2012, 2, 28);
 		
-		System.out.println(d1);
+		
+		
+		
+		
+//		System.out.println(d1.getBasicFormat());
 		
 		
 		

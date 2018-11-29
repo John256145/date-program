@@ -17,8 +17,8 @@ public class MyDate {
 		month = y;
 		day = z;
 		String month = strMonths[y - 1];
-		System.out.println(day + " " + month + " " + year);
-		System.out.println(isLeapYear(x));
+		System.out.println(day + " " + month + " " + x);
+//		System.out.println(isLeapYear(x));
 }
 	
 	
@@ -44,7 +44,13 @@ public class MyDate {
 	
 	//setters
 	public void setYear(int x) {
-		year = x;
+		if (x > 0 && x < 10000) {
+			year = x;
+		}else {
+			year = 0;
+		}
+		
+		
 	}
 	
 	public void setMonth(int y) {
