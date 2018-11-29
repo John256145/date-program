@@ -13,7 +13,7 @@ public class Circle {
 			radius = r;
 	}
 		
-		private double  radius;
+		private double radius;
 		
 		public double getDiameter (){
 			double theDiameter ;
