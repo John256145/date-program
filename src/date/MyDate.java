@@ -12,12 +12,12 @@ public class MyDate {
 	
 	//this tells MyDate to look for 3 int variables
 	public MyDate(int x, int y, int z) {
-
-		year = x;
-		month = y;
-		day = z;
+		
+		year = setYear(x);
+		month = setMonth(y);
+		day = setDay(z);
 		String month = strMonths[y - 1];
-		System.out.println(day + " " + month + " " + x);
+		System.out.println(day + " " + month + " " + year);
 //		System.out.println(isLeapYear(x));
 }
 	
@@ -43,22 +43,26 @@ public class MyDate {
 	
 	
 	//setters
-	public void setYear(int x) {
+	public int setYear(int x) {
 		if (x > 0 && x < 10000) {
 			year = x;
+			return year;
 		}else {
 			year = 0;
+			return year;
 		}
 		
 		
 	}
 	
-	public void setMonth(int y) {
+	public int setMonth(int y) {
 		month = y;
+		return month;
 	}
 	
-	public void setDay(int z) {
-		year = z;
+	public int setDay(int z) {
+		day = z;
+		return day;
 	}
 	
 	public String getBasicFormat (){
