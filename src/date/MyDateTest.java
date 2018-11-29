@@ -5,7 +5,7 @@ public class MyDateTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		MyDate d1 = new MyDate(2012, 2, 28);
+		MyDate d1 = new MyDate(2011, 12, 26);
 		
 		
 		
