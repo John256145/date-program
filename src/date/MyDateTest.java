@@ -7,7 +7,7 @@ public class MyDateTest {
 		
 		MyDate d1 = new MyDate(2011, 1, 26);
 		
-		System.out.println(d1);
+		System.out.println(d1.toString());
 		
 		
 		

@@ -2,6 +2,10 @@ package date;
 
 public class MyDate {
 	
+	private int year, month, day;
+	private static String [] strMonths = {"Jan" , "Feb", "Mar", "April", "May" ,"Jun" , "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+	private static String [] strDays = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", };
+	private static int daysInMonths [] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	
 	public MyDate() {
 
@@ -28,7 +32,6 @@ public class MyDate {
 			month = setMonth(y);
 			day = setDay(z);
 			String month = strMonths[y - 1];
-			System.out.println(day + " " + month + " " + year);
 		}else {
 			System.out.println("Invalid date!");
 		}
@@ -43,10 +46,6 @@ public class MyDate {
 	//day = z
 	
 	
-	private int year, month, day;
-	private static String [] strMonths = {"Jan" , "Feb", "Mar", "April", "May" ,"Jun" , "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-	private static String [] strDays = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", };
-	private static int daysInMonths [] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	
 	//getters
 	public int getYear (){
@@ -125,7 +124,10 @@ public class MyDate {
 		}
 	}
 	
-	
+	public String toString()
+	{
+		return "Year: " + year + " Month: " + month + " Day: " + day;
+	}
 	
 
 	
