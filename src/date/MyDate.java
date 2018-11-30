@@ -28,9 +28,9 @@ public class MyDate {
 	public MyDate(int x, int y, int z) {
 		
 		if ( isValidDate(x , y, z) == true ) {
-			year = setYear(x);
-			month = setMonth(y);
-			day = setDay(z);
+			setYear(x);
+			setMonth(y);
+			setDay(z);
 			String month = strMonths[y - 1];
 		}else {
 			System.out.println("Invalid date!");
@@ -63,7 +63,18 @@ public class MyDate {
 	// end of getters
 	
 	//setters
-	public int setYear(int x) {
+	public void setDate(int x, int y, int z)
+	{
+		if(isValidDate(x, y, z))
+		{
+			year = x;
+			month = y;
+			day = z;
+		}
+		else
+			System.out.println("Invalid date");
+	}
+	public void setYear(int x) {
 		
 //		if (x > 0 && x < 10000) {
 //			year = x;
@@ -74,11 +85,10 @@ public class MyDate {
 //		}
 		
 		year = x;
-		return year;
 		
 	}
 	
-	public int setMonth(int y) {
+	public void setMonth(int y) {
 //		if (y > 0 && y < 13) {
 //			month = y;
 //			return month;
@@ -87,12 +97,10 @@ public class MyDate {
 //			return month;
 //		}
 		month = y;
-		return month;
 	}
 	
-	public int setDay(int z) {
+	public void setDay(int z) {
 		day = z;
-		return day;
 	}
 	// end of setters
 	
@@ -202,6 +210,43 @@ public class MyDate {
 		return day;
 	}
 	
+	public int nextYear()
+	{
+		if(year == 9999)
+		{
+			System.out.println("Invalid year");
+			return 0;
+		}
+		else if(day == getDayMax(year, month))
+		{
+			
+			day = getDayMax(year + 1, month);
+			year++;
+		}
+		else
+		{
+			year ++;
+		}
+		return year;
+	}
+	
+	public int previousDay()
+	{
+		if(day == 1 && month == 1)
+		{
+			day = 31;
+			month = 12;
+			year--;
+		}
+		else if(day == 1)
+		{
+			day = getDayMax(year, month - 1);
+			month--;
+		}
+		else
+			day--;
+		return day;
+	}
 	
 	/*
 	public String getDayOfWeek(int year, int month, int day) 
