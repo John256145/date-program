@@ -14,7 +14,8 @@ public class MyDateTest {
 		System.out.println(d1);
 		System.out.println(d1.nextYear());
 		System.out.println(d1);
-		
+		System.out.println(d1.previousDay());
+		System.out.println(d1);
 
 		
 		//d1.setDate(2110, 12, 30);
