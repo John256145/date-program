@@ -210,6 +210,26 @@ public class MyDate {
 		return day;
 	}
 	
+	public int nextMonth()
+	{
+		if(month == 12 && day == getDayMax(year, month))
+		{
+			month = 1;
+			day = getDayMax(year, 1);
+			year++;
+		}
+		else if(day == getDayMax(year, month))
+		{
+			day = getDayMax(year, month + 1);
+			month++;
+		}
+		else
+		{
+			month++;
+		}
+		return month;
+	}
+	
 	public int nextYear()
 	{
 		if(year == 9999)
