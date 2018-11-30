@@ -11,6 +11,11 @@ public class MyDate {
 		
 		
 		
+		
+		
+		
+		
+		
 	}
 	
 	//this tells MyDate to look for 3 int variables
