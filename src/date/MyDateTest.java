@@ -5,22 +5,15 @@ public class MyDateTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		MyDate d1 = new MyDate(2011, 12, 26);
+		MyDate d1 = new MyDate(2011, 1, 26);
 		
-		
+		System.out.println(d1);
 		
 		
 		
 //		System.out.println(d1.getBasicFormat());
 		
-		
-		
-//		MyDate myTest = new MyDate();
-//		myTest . settestx(2);
-//		myTest . settesty(3);
-//		
-//		int myTotal = myTest.testmath ();
-//		System.out.println(myTotal);
+
 	}
 
 }

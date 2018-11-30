@@ -8,10 +8,14 @@ public class MyDate {
 		year = 0;
 		month = 0;
 		day = 0;
+		
+		
+		
 	}
 	
 	//this tells MyDate to look for 3 int variables
 	// then it checks if the 3 variables are a valid date
+	
 	public MyDate(int x, int y, int z) {
 		
 		if ( isValidDate(x , y, z) == true ) {
@@ -30,7 +34,7 @@ public class MyDate {
 }
 	
 	//year = x
-	//month = Y
+	//month = y
 	//day = z
 	
 	
@@ -104,12 +108,11 @@ public class MyDate {
 		}
 	}
 	
-	public boolean isValidDate (int x, int y, int z){
+	public static boolean isValidDate (int x, int y, int z){
 		if ( (x > 0 && x < 10000) &&
 				(y > 0 && y < 13) &&
-				(z > 0 && z < 32)
-				
-				) {
+				(z > 0 && z < 32)) {
+			
 			return true;
 		}else {
 			return false;
@@ -118,35 +121,6 @@ public class MyDate {
 	
 	
 	
-	
-	//just to make sure everything is working
-	// test x and test y will need both a setter and getter
-//	private int testx , testy;
-//	
-//	public int testmath (){
-//		int testTotal ;
-//		testTotal = testx * testy ;
-//		return testTotal ;
-//	}
-//	
-//	
-//	public int gettestx (){
-//		return testx ;
-//		}
-//	
-//	public int gettesty (){
-//		return testy ;
-//		}
-//	
-//	
-//	
-//	public void settestx ( int theX ){
-//		testx = theX ;
-//		}
-//	
-//	public void settesty ( int theY ){
-//		testy = theY ;
-//		}
-//	
+
 	
 }
