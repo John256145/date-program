@@ -3,7 +3,7 @@ package date;
 public class MyDate {
 	
 	private int year, month, day;
-	private static String [] strMonths = {"Jan" , "Feb", "Mar", "April", "May" ,"Jun" , "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+	private static String [] strMonths = {"Jan" , "Feb", "Mar", "Apr", "May" ,"Jun" , "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
 	private static String [] strDays = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", };
 	private static int daysInMonths [] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	
@@ -124,9 +124,96 @@ public class MyDate {
 		}
 	}
 	
+	public int getDayMax(int year, int month)
+	{
+		String monthName = strMonths[month-1];
+		int dayMax = 0;
+		if(monthName.equals("Jan"))
+		{
+			dayMax = 31;
+		}
+		else if(monthName.equals("Feb"))
+		{
+			if(isLeapYear(year))
+			{
+				dayMax = 29;
+			}
+			else dayMax = 28;
+		}
+		else if(monthName.equals("Mar"))
+		{
+			dayMax = 31;
+		}
+		else if(monthName.equals("Apr"))
+		{
+			dayMax = 30;
+		}
+		else if(monthName.equals("May"))
+		{
+			dayMax = 31;
+		}
+		else if(monthName.equals("Jun"))
+		{
+			dayMax = 30;
+		}
+		else if(monthName.equals("Jul"))
+		{
+			dayMax = 31;
+		}
+		else if(monthName.equals("Aug"))
+		{
+			dayMax = 31;
+		}
+		else if(monthName.equals("Sep"))
+		{
+			dayMax = 30;
+		}
+		else if(monthName.equals("Oct"))
+		{
+			dayMax = 31;
+		}
+		else if(monthName.equals("Nov"))
+		{
+			dayMax = 30;
+		}
+		else
+		{
+			dayMax = 31;
+		}
+		
+		return dayMax;
+	}
+	
+	public int nextDay()
+	{
+		if(day == getDayMax(year, month) && month == 12)
+		{
+			day = 1;
+			month = 1;
+			year++;
+		}
+		else if(day == getDayMax(year, month))
+		{
+			day = 1;
+			month ++;
+		}
+		else
+			day++;
+		return day;
+	}
+	
+	
+	/*
+	public String getDayOfWeek(int year, int month, int day) 
+	{
+		String dayName = strDays[day-1];
+		return dayName;
+	}
+	*/
+	
 	public String toString()
 	{
-		return "Year: " + year + " Month: " + month + " Day: " + day;
+		return day + " " + strMonths[month-1] + " " + year;
 	}
 	
 
