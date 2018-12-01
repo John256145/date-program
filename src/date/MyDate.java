@@ -16,10 +16,6 @@ public class MyDate {
 		
 		
 		
-		
-		
-		
-		
 	}
 	
 	//this tells MyDate to look for 3 int variables
@@ -207,6 +203,11 @@ public class MyDate {
 		}
 		else
 			day++;
+		
+		if (day > getDayMax(year,month) ) {
+			day = getDayMax(year,month);
+		}
+		
 		return day;
 	}
 	
@@ -227,6 +228,11 @@ public class MyDate {
 		{
 			month++;
 		}
+		
+		if (day > getDayMax(year,month) ) {
+			day = getDayMax(year,month);
+		}
+		
 		return month;
 	}
 	
@@ -247,6 +253,12 @@ public class MyDate {
 		{
 			year ++;
 		}
+		
+		
+		if (day > getDayMax(year,month) ) {
+			day = getDayMax(year,month);
+		}
+		
 		return year;
 	}
 	
@@ -265,8 +277,55 @@ public class MyDate {
 		}
 		else
 			day--;
+		
+		if (day > getDayMax(year,month) ) {
+			day = getDayMax(year,month);
+		}
+		
 		return day;
 	}
+	
+	public int previousMonth()
+	{
+		if(month == 1)
+		{
+			month = 12;
+			year--;
+		}
+		else
+		{
+			month--;
+		}
+		
+		if (day > getDayMax(year,month) ) {
+			day = getDayMax(year,month);
+		}
+		
+		return month;
+	}
+	
+	public int previousYear()
+	{
+		if(year == 1)
+		{
+			System.out.println("Invalid year");
+			return 0;
+		}
+		else
+		{
+			year --;
+		}
+		
+		if (day > getDayMax(year,month) ) {
+			day = getDayMax(year,month);
+		}
+		
+		
+		return year;
+	}
+	
+	
+	
 	
 	/*
 	public String getDayOfWeek(int year, int month, int day) 
