@@ -56,18 +56,58 @@ public class MyDate {
 		return day ;
 		}
 	
-	public int getDayOfWeek(int year) {
-		int numberOfDays = 0;
-		for (int i = 0; i < year; i++) {
-			
-			if (isLeapYear(year) == true) {
-				numberOfDays = numberOfDays + 366;
-			}else {
-				numberOfDays = numberOfDays + 365;
-			}
-			
+	public int getDayOfWeek(int year, int month, int day) {
+
+		double a = 0;
+		int b = 0;
+		int c = 0;
+		int d = 0;
+		int m = 0;
+		double w = 0;
+		
+		if (month == 1 || month == 2) {
+			a = year - 1;
+		}else {
+			a = year;
 		}
-		return numberOfDays;
+		
+		b = year % 100;
+		c = year / 100;
+		d = day;
+		
+		if (month == 1) {
+			m = 11;
+		}else if (month == 2) {
+			m = 12;
+		}else if (month == 3) {
+			m = 1;
+		}else if (month == 4) {
+			m = 2;
+		}else if (month == 5) {
+			m = 3;
+		}else if (month == 6) {
+			m = 4;
+		}else if (month == 7) {
+			m = 5;
+		}else if (month == 8) {
+			m = 6;
+		}else if (month == 9) {
+			m = 7;
+		}else if (month == 10) {
+			m = 8;
+		}else if (month == 11) {
+			m = 9;
+		}else {
+			m = 10;}
+		
+		w = (d + (2.6 * m - 0.2) + b + (b/4) + (c/4) - 2 * c ) % 7;
+		
+		if (w < 0) {
+			w += 7;
+		}
+		
+		int v = (int)w;
+		return v;
 	}
 	
 	
@@ -358,7 +398,7 @@ public class MyDate {
 	
 	public String toString()
 	{
-		return /*strDays[getDayOfWeek(year)] + " " + */ day + " " + strMonths[month-1] + " " + year;
+		return strDays[getDayOfWeek(year, month, day)] + " " + day + " " + strMonths[month-1] + " " + year;
 	}
 	
 
