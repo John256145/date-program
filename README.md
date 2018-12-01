@@ -2,6 +2,7 @@
 Specify a date.
 
 Methods allowed:
+
 .nextDay()
 
 
