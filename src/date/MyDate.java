@@ -120,15 +120,21 @@ public class MyDate {
 	public static boolean isValidDate (int x, int y, int z){
 		if ( (x > 0 && x < 10000) &&
 				(y > 0 && y < 13) &&
-				(z > 0 && z < 32)) {
+				(z > 0 && z <= getDayMax(x,y) ) ) {	
+			
 			
 			return true;
-		}else {
+		}
+		
+		
+		
+		
+		else {
 			return false;
 		}
 	}
 	
-	public int getDayMax(int year, int month)
+	public static int getDayMax(int year, int month)
 	{
 		String monthName = strMonths[month-1];
 		int dayMax = 0;
