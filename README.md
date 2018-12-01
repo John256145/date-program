@@ -1,3 +1,17 @@
 # date-program
-what am i doing
-pls tell me this works
+Specify a date.
+
+Methods allowed:
+
+.nextDay()
+
+
+.nextMonth()
+
+.nextYear()
+
+.previousDay()
+
+.previousMonth()
+
+.previousYear()
