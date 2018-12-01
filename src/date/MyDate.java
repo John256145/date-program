@@ -56,6 +56,21 @@ public class MyDate {
 		return day ;
 		}
 	
+	public int getDayOfWeek(int year) {
+		int numberOfDays = 0;
+		for (int i = 0; i < year; i++) {
+			
+			if (isLeapYear(year) == true) {
+				numberOfDays = numberOfDays + 366;
+			}else {
+				numberOfDays = numberOfDays + 365;
+			}
+			
+		}
+		return numberOfDays;
+	}
+	
+	
 	// end of getters
 	
 	//setters
@@ -343,7 +358,7 @@ public class MyDate {
 	
 	public String toString()
 	{
-		return day + " " + strMonths[month-1] + " " + year;
+		return /*strDays[getDayOfWeek(year)] + " " + */ day + " " + strMonths[month-1] + " " + year;
 	}
 	
 
