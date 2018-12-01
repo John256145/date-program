@@ -29,6 +29,10 @@ public class MyDateTest {
 		
 		
 		
+		
+//		MyDate d2 = new MyDate(2018, 5, 5);
+//		System.out.println(d2);
+		
 		//d1.setDate(2110, 12, 30);
 		//This will replace the current date with a new specified date
 		
