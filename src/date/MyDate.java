@@ -59,8 +59,8 @@ public class MyDate {
 	public int getDayOfWeek(int year, int month, int day) {
 
 		double a = 0;
-		int b = 0;
-		int c = 0;
+		double b = 0;
+		double c = 0;
 		int d = 0;
 		int m = 0;
 		double w = 0;
@@ -71,8 +71,8 @@ public class MyDate {
 			a = year;
 		}
 		
-		b = year % 100;
-		c = year / 100;
+		b = a % 100;
+		c = a / 100;
 		d = day;
 		
 		if (month == 1) {
