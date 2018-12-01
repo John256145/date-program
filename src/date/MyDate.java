@@ -61,8 +61,8 @@ public class MyDate {
 		double a = 0;
 		double b = 0;
 		double c = 0;
-		int d = 0;
-		int m = 0;
+		double d = 0;
+		double m = 0;
 		double w = 0;
 		
 		if (month == 1 || month == 2) {
@@ -100,14 +100,15 @@ public class MyDate {
 		}else {
 			m = 10;}
 		
-		w = (d + (2.6 * m - 0.2) + b + (b/4) + (c/4) - 2 * c ) % 7;
+		w = (d + ((2.6 * m) - 0.2) + b + (b/4) + (c/4) - (2 * c)) % 7;
+//		w = (d + (2.6 * m - 0.2) - 2*c + b + (b/4) + (c/4) ) % 7;
+		
 		
 		if (w < 0) {
 			w += 7;
 		}
 		
-		int v = (int)w;
-		return v;
+		return (int)w;
 	}
 	
 	
