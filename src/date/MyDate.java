@@ -282,6 +282,13 @@ public class MyDate {
 			day = getDayMax(year, 1);
 			year++;
 		}
+		
+		if (month == 12) {
+			month = 1;
+			year++;
+		}
+		
+		
 		else if(day == getDayMax(year, month))
 		{
 			day = getDayMax(year, month + 1);
