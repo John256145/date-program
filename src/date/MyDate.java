@@ -407,6 +407,7 @@ public class MyDate {
 	
 	public String toString()
 	{
+		
 		return strDays[getDayOfWeek(year, month, day)] + " " + day + " " + strMonths[month-1] + " " + year;
 	}
 	
