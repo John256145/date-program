@@ -250,7 +250,7 @@ public class MyDate {
 		return dayMax;
 	}
 	
-	public int nextDay()
+	public String nextDay()
 	{
 		if(day == getDayMax(year, month) && month == 12)
 		{
@@ -270,10 +270,11 @@ public class MyDate {
 			day = getDayMax(year,month);
 		}
 		
-		return day;
+		return toString();
+		
 	}
 	
-	public int nextMonth()
+	public String nextMonth()
 	{
 		if(month == 12 && day == getDayMax(year, month))
 		{
@@ -295,15 +296,15 @@ public class MyDate {
 			day = getDayMax(year,month);
 		}
 		
-		return month;
+		return toString();
 	}
 	
-	public int nextYear()
+	public String nextYear()
 	{
 		if(year == 9999)
 		{
 			System.out.println("Invalid year");
-			return 0;
+			return toString();
 		}
 		else if(day == getDayMax(year, month))
 		{
@@ -321,10 +322,10 @@ public class MyDate {
 			day = getDayMax(year,month);
 		}
 		
-		return year;
+		return toString();
 	}
 	
-	public int previousDay()
+	public String previousDay()
 	{
 		if(day == 1 && month == 1)
 		{
@@ -344,10 +345,10 @@ public class MyDate {
 			day = getDayMax(year,month);
 		}
 		
-		return day;
+		return toString();
 	}
 	
-	public int previousMonth()
+	public String previousMonth()
 	{
 		if(month == 1)
 		{
@@ -363,15 +364,15 @@ public class MyDate {
 			day = getDayMax(year,month);
 		}
 		
-		return month;
+		return toString();
 	}
 	
-	public int previousYear()
+	public String previousYear()
 	{
 		if(year == 1)
 		{
 			System.out.println("Invalid year");
-			return 0;
+			return toString();
 		}
 		else
 		{
@@ -383,7 +384,7 @@ public class MyDate {
 		}
 		
 		
-		return year;
+		return toString();
 	}
 	
 	
